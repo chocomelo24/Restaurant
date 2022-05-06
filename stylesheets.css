@@ -1,0 +1,133 @@
+* {
+    font-family: "Inconsolata", monospace;
+    scroll-behavior: smooth;
+  }
+  #home {
+    background-image: url(./landing-rest.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  .p-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+  .h1, h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    color: white;
+    text-shadow: 3px 5px 8px black;
+    font-family: 'Playfair' sans-serif;
+    font-weight: bold;
+}
+.h2, h2 {
+  font-size: calc(1.325rem + .9vw);
+  color: white;
+  font-family: 'Poppins' serif;
+}
+
+  #about {
+    width: 100%;
+    height: 80vh;
+    background:
+      /* top, transparent red, faked with gradient */ linear-gradient(
+        rgba(210, 203, 203, 0.45),
+        transparent
+      ),
+      /* bottom, image */ url(./about-rest.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .intro {
+    margin-right: 60%;
+  }
+  .intro span {
+    color: #CDA45E;
+  }
+  img, svg {
+    vertical-align: middle;
+    border-radius: 25px;
+    padding-top: 50px;
+    /* margin-left: auto; */
+    padding-right: 35px;
+}
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  .section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: #cda45e;
+}
+
+
+
+  /* GRID STYLING HERE */
+  body {
+    display: grid;
+    grid-template-areas:
+      "home home home"
+      "about about about"
+      "menu menu menu"
+      "specials specials specials"
+      "events events events"
+      "chefs chefs chefs"
+      "gallery gallery gallery"
+      "contact contact contact";
+  }
+  @media screen and (max-width: 600px) {
+    body {
+      grid-template-areas:
+        "home"
+        "about"
+        "menu"
+        "specials"
+        "events"
+        "chefs"
+        "gallery"
+        "contact";
+    }
+  }
+  #home {
+    grid-area: home;
+  }
+  #about {
+    grid-area: about;
+  }
+  #menu {
+    grid-area: menu;
+  }
+  #specials {
+    grid-area: specials;
+  }
+  #events {
+    grid-area: events;
+  }
+  #chefs {
+    grid-area: chefs;
+  }
+  #gallery {
+    grid-area: gallery;
+  }
+  #contact {
+    grid-area: contact;
+  }
